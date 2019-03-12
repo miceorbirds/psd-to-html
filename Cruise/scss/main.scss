@@ -1,0 +1,195 @@
+//  colors
+$text-color: #0d3351;
+$bgc: #f3f3f3;
+ 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=cyrillic');
+
+// Шрифты
+@font-face {
+    font-family: "Raleway Regular";
+    src: url("../font/ralewayregular.woff");
+}
+
+@font-face {
+    font-family: "Raleway Bold";
+    src: url("../font/ralewaybold.woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway Regular",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-color;
+}
+
+.title {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    padding: 0 15px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#main {
+    position: relative;
+    min-height: 650px;
+    background: url("../img/main-bg.jpg") no-repeat 0 0;
+    background-size: cover;
+    padding-top: 30px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 58px;
+        height: 320px;
+        background: url("../img/line.png") no-repeat 0 0;
+        background-size: 100% auto;
+        bottom: -160px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+}
+
+.nav-item {
+    width: 22px;
+    height: 1px;
+    margin-bottom: 5px;
+    background-color: $text-color;
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.some-links {
+    li {
+        margin-left: 40px;
+        display: inline-block;
+        list-style: none;
+    }
+}
+
+.phone {
+    margin-left: 40px;
+    a {
+        font-family: "Roboto Slab", serif;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+}
+
+.main-offer {
+    text-align: center;
+    .logo {
+        margin-top: 20px;
+    }
+    .title_main {
+        margin-bottom: 60px;
+        font-size: 36px;
+        span {
+            font-size: 100px;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: #33c7fd;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.catalogue {
+    background-color: $bgc;
+    padding: 130px 0 60px 0;
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        line-height: 1;
+    }
+    &__sort {
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 30px;
+        &_select {
+            width: 55px;
+            background: none;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-style: italic;
+            // option не поддаются изменениям в css только jQuery
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.items {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.item {
+    background-color: #fff;
+    margin: 20px 15px;
+    width: 50%;
+    // &_big {
+    //     height: 630px;
+    // }
+    &__img {
+        width: 100%;
+    }
+    &__description {
+        padding: 20px 40px;
+    }
+    &__title {
+        font-size: 18px;
+        color: #00a2dd;
+    }
+    &__info {
+        span {
+            font-weight: 700;
+        }
+    }
+    &__price {
+        font-family: "Roboto Slab", serif;
+        font-size: 30px;
+        line-height: 0.5;
+    }
+}

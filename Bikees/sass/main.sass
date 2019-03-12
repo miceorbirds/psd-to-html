@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,300i,600&subset=cyrillic")
+
+@font-face
+    font-family: 'HighTideB'
+    src: url('../font/high_tide_bold-webfont.woff2') format('woff2'), url('../font/high_tide_bold-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'HighTideSs'
+    src: url('../font/hightide_sans-webfont.woff2') format('woff2'), url('../font/hightide_sans-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'HighTideR'
+    src: url('../font/hightide-webfont.woff2') format('woff2'), url('../font/hightide-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'DymaxionScriptR'
+    src: url('../font/DymaxionScript-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'OdinRoundedB'
+    src: url('../font/odinroundedb-webfont.woff2') format('woff2'), url('../font/odinroundedb-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: none
+
+body
+    position: relative
+    background: #595f6f
+    font-family: 'Open Sans Condensed', sans-serif
+    font-weight: 300
+
+    // HEADER
+.header
+    display: flex
+    position: absolute
+    width: 100%
+    height: 90px
+    padding: 30px 43px 15px
+    background-color: rgba(255,255,255,0.1)
+    justify-content: space-between
+
+// SEARCH
+.search
+    position: relative
+    min-width: 300px
+    &__input
+        position: absolute
+        top: 0
+        right: 0
+        height: 50px
+        width: 0
+        padding-left: 42px
+        vertical-align: top
+        background-color: transparent
+        border: none
+        border-bottom: 2px solid transparent
+        color: #ffffff
+        font-size: 30px
+        font-family: inherit
+        transition: .4s cubic-bezier(0, 0.8, 0, 1)
+        z-index: 2
+        &:hover
+            cursor: pointer
+            border-bottom: 2px solid #ffffff
+        &:focus
+            width: 250px
+            z-index: 1
+            border-bottom: 2px solid #ffffff
+            padding-left: 0
+            
+    &__button
+        position: absolute
+        top: 0
+        right: 0
+        background-color: transparent
+        border: none
+        cursor: pointer
+        &::before
+            font-family: "Font Awesome 5 Free"
+            font-weight: 900
+            content: "\f002"
+            font-size: 30px
+            color: #ffffff
+
+// MAIN
+.main
+    display: flex
+    min-height: 100vh
+    color: #ffffff
+    .bike
+        width: 50%
+        text-align: center
+        padding-top: 30vh
+        &_first
+            background: linear-gradient(to bottom, rgba(29,97,156,0.7), rgba(72,177,176,0.7)), url("../img/bike-1.jpg")
+            background-size: auto auto, cover
+            background-repeat: no-repeat
+            background-position: 100%, center center
+        &_second
+            background: linear-gradient(to bottom, rgba(126,49,192,0.7), rgba(225,146,255,0.7)), url("../img/bike-2.jpg")
+            background-size: auto auto, cover
+            background-repeat: no-repeat
+            background-position: 100%, center center
+        .title
+            margin: 0
+            padding: 0
+            font-size: 75px
+            line-height: 1
+            &_first
+                font-family: "HighTideR", sans-serif
+            &_second
+                font-family: "DymaxionScriptR", cursive
+        .subtitle
+            font-size: 50px
+            font-weight: 300
+
+.btn
+    width: 225px
+    height: 70px
+    margin-top: 70px
+    background-color: rgba(255,255,255,0.12)
+    border: none
+    border-radius: 7px
+    font-family: inherit
+    color: inherit
+    font-size: 25px
+    &:hover
+        background-color: rgba(255,255,255,0.5)
+        transition: .4s cubic-bezier(0, 0.8, 0, 1)
+        cursor: pointer
+
+// FOOTER
+.footer
+    display: flex
+    height: 280px
+    padding: 30px 0 43px 30px
+    font-size: 17px
+    color: #c3c3c3
+    a
+        color: #a8abb3
+        &:hover
+            color: #ffffff
+    &_top
+        width: 50%
+        .logo_footer
+            font-family: 'OdinRoundedB'
+            color: #ffffff
+            font-size: 29px
+            line-height: 0.7
+            span
+                font-size: 57px
+        p
+            max-width: 425px
+            font-family: "Open Sans", sans-serif
+            font-weight: 600
+        .pay
+            text-transform: uppercase
+        .discont
+            margin-top: 30px
+            text-decoration: underline
+        .copyright
+            margin-top: 52px
+            color: #ffffff
+            font-weight: 700
+            text-transform: uppercase
+    &_middle
+        width: 25%
+        border: 1px solid #4d5362
+        border-top: none
+        border-bottom: none
+        .nav
+            width: 100%
+            height: 145px
+            margin-top: 50px
+            font-family: "Open Sans", sans-serif
+            font-weight: 300
+            text-transform: uppercase
+            list-style: none
+            display: flex
+            flex-flow: column wrap
+            // border: 2px solid green
+            li
+                // border: 1px solid blue
+                padding-bottom: 15px
+                padding-left: 70px
+                &:nth-child(n+4)
+                    padding-left: 0
+            li > a
+                text-decoration: none
+    &_bottom
+        margin: 15px auto
+        text-align: center
+        .form
+            &__label
+                text-transform: uppercase
+                font-size: 18px
+                color: #ffffff
+            &__input
+                display: block
+                width: 225px
+                height: 55px
+                margin: 10px auto 40px
+                padding: 20px 25px
+                font-family: "Open Sans", sans-serif
+                font-weight: 300
+                font-style: italic
+                font-size: 15px
+                text-align: center
+                background: rgba(129,129,129,0.1)
+                border: none
+                color: #a8abb3
+                &:hover, &:focus
+                    color: #ffffff
+.social-links
+    a
+        margin-right: 25px
+        &:last-child
+            margin-right: 0
+    .icon
+        font-size: 25px
+              
+

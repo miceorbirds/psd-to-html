@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=cyrillic");
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("../font/ralewayregular.woff");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("../font/ralewaybold.woff");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway Regular",sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0d3351;
+}
+
+.title {
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  padding: 0 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+#main {
+  position: relative;
+  min-height: 650px;
+  background: url("../img/main-bg.jpg") no-repeat 0 0;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+#main::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 320px;
+  background: url("../img/line.png") no-repeat 0 0;
+  background-size: 100% auto;
+  bottom: -160px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.nav-item {
+  width: 22px;
+  height: 1px;
+  margin-bottom: 5px;
+  background-color: #0d3351;
+}
+
+.nav-item :last-child {
+  margin-bottom: 0;
+}
+
+.some-links li {
+  margin-left: 40px;
+  display: inline-block;
+  list-style: none;
+}
+
+.phone {
+  margin-left: 40px;
+}
+
+.phone a {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.phone p {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.main-offer {
+  text-align: center;
+}
+
+.main-offer .logo {
+  margin-top: 20px;
+}
+
+.main-offer .title_main {
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.main-offer .title_main span {
+  font-size: 100px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 50px;
+  background-color: #33c7fd;
+  text-decoration: none;
+  color: #fff;
+}
+
+.catalogue {
+  background-color: #f3f3f3;
+  padding: 130px 0 60px 0;
+}
+
+.catalogue__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.catalogue__sort {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.catalogue__sort_select {
+  width: 55px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-style: italic;
+}
+
+.catalogue__sort_select:focus {
+  outline: none;
+}
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.item {
+  background-color: #fff;
+  margin: 20px 15px;
+  width: 50%;
+}
+
+.item__img {
+  width: 100%;
+}
+
+.item__description {
+  padding: 20px 40px;
+}
+
+.item__title {
+  font-size: 18px;
+  color: #00a2dd;
+}
+
+.item__info span {
+  font-weight: 700;
+}
+
+.item__price {
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+  line-height: 0.5;
+}
+/*# sourceMappingURL=main.css.map */
