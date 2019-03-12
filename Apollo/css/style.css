@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,700');
 
 @font-face {
-    font-family: 'LMRSlanted-10-Rg';
+    font-family: 'LMRSlantedRg';
     src: url('../font/lmromanslant10-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -24,11 +22,11 @@
 }
 
 body {
-  min-width: 1600px;
+  /* min-width: 1600px; */
   margin: 0;
   padding: 0;
   background: #ffffff;
-  font-family: 'LMRSlanted-10-Rg', serif;
+  font-family: 'LMRSlantedRg', serif;
   font-size: 18px;
   line-height: 25px;
 }
@@ -52,10 +50,9 @@ section {
 }
 
 .container {
-  width: 1500px;
+  max-width: 1500px;
   margin: 0 auto;
 }
-
 
 
 /* первый блок */
@@ -170,12 +167,12 @@ a:hover {
 #check-menu:checked ~ .fourth {
   display: none;
 }
-
 /* конец бургер-меню  */
+
 
 .header-promo {
   padding-top: 180px;
-  padding-left: 180px;
+  padding-left: 180pxem;
 }
 
 .header-promo p {
@@ -192,7 +189,6 @@ a:hover {
   height: 80px;
   background: #343434;
 }
-
 
 
 /* второй блок */
@@ -290,6 +286,7 @@ a:hover {
   top: 340px;
   z-index: 10001;
 }
+
 .arrow:hover {
   cursor: pointer;
 }
